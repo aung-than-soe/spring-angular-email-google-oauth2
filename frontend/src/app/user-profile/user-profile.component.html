@@ -1,0 +1,13 @@
+<div class="container py-4">
+  <div class="card mx-auto" style="width: 32rem;" *ngIf="($userProfile | async) as profile">
+    <div class="card-header mx-auto">
+      <h2>This is protected route.</h2>
+    </div>
+    <img src="{{profile.picture}}" class="card-img-top" [alt]="profile.picture ? 'profile image' : 'profile image unavailable'">
+    <div class="card-body">
+      <h5 class="card-title">{{profile.username}}</h5>
+      <p class="card-text">{{profile.email}}</p>
+    </div>
+    <button class="btn btn-block btn-primary" (click)="logout()">Logout</button>
+  </div>
+</div>

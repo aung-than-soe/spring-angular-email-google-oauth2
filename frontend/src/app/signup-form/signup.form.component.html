@@ -1,0 +1,75 @@
+<div class="container py-4">
+  <div class="card mx-auto" style="width: 44rem;">
+    <div class="card-header">
+      <h2 class="text-center">Sign Up</h2>
+    </div>
+    <div class="card-body">
+      <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" novalidate>
+        <div class="row mb-3">
+          <label for="first_name" class="col-sm-2 col-form-label">First Name
+            <span *ngIf="firstName?.invalid && firstName?.touched" class="text-danger">
+              *
+            </span>
+          </label>
+          <div class="col-sm-4">
+            <input type="text" class="form-control" id="first_name" formControlName="firstName">
+          </div>
+          <label for="last_name" class="col-sm-2 col-form-label">Last Name
+            <span *ngIf="lastName?.invalid && lastName?.touched" class="text-danger">
+              *
+            </span>
+          </label>
+          <div class="col-sm-4">
+            <input type="text" class="form-control" id="last_name" formControlName="lastName">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="username" class="col-sm-2 col-form-label">Full Name
+            <span *ngIf="username?.invalid && username?.touched" class="text-danger">
+              *
+            </span>
+          </label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="username" formControlName="username">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="email" class="col-sm-2 col-form-label">Email
+            <span *ngIf="email?.invalid && email?.touched" class="text-danger">
+              *
+            </span>
+          </label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" id="email" formControlName="email">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="password" class="col-sm-2 col-form-label">Password
+            <span *ngIf="password?.invalid && password?.touched" class="text-danger">
+              *
+            </span>
+          </label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" id="password" formControlName="password">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="confirmPass" class="col-sm-2 col-form-label">Confirm Password
+            <span *ngIf="confirmPass?.invalid && confirmPass?.touched" class="text-danger">
+              *
+            </span>
+          </label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" id="confirmPass" formControlName="confirmPass">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-2"></div>
+          <div class="col-sm-10 row mx-auto">
+            <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

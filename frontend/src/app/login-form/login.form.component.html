@@ -1,0 +1,28 @@
+<div class="container py-4">
+  <div class="card mx-auto" style="width: 32rem;">
+    <div class="card-header">
+      <h2 class="text-center">Login Form</h2>
+    </div>
+    <div class="card-body">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" formControlName="email" placeholder="Enter email">
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" formControlName="password" placeholder="Enter password">
+        </div>
+        <div class="vstack gap-2 col-md-12 mx-auto">
+          <button type="submit" class="btn btn-primary">Login</button>
+          <a href="{{($url | async)}}" class="btn btn-link" >Login with Google</a>
+        </div>
+        <br>
+        <p class="mx-auto text-center"><b>OR</b></p>
+        <div class="vstack gap-2 col-md-12 mx-auto">
+          <a routerLink="/register" class="btn btn-link" >Sign Up Here</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

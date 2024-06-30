@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: backend
+  security:
+      oauth2:
+        resource-server:
+          opaque-token:
+            client-id: 958735570510-t52aqqte83q0f36bm5jhcjdi53urfq3q.apps.googleusercontent.com
+            client-secret: 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
+            introspection-uri: https://www.googleapis.com
+  datasource:
+    url: jdbc:postgresql://localhost:5432/coding_test_db
+    username: root
+    password: root
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    open-in-view: off
+
+access-token:
+  secret-key: 5pAq6zRyX8bC3dV2wS7gN1mK9jF0hL4tUoP6iBvE3nG8xZaQrY7cW2fA
