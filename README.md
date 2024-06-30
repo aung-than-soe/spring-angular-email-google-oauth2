@@ -17,4 +17,4 @@
 
 #### **Two Types Of Authentication: JWT (Default login via email & password) & Opaque Token (Google Login)**
 
-#### **`Provided Google Client ID & Secret ID are testing only, may remove in future`**
+#### **`Provided Google Client ID & Secret ID for testing purpose only, may remove in future`**
